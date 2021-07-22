@@ -81,9 +81,6 @@ helm: ## Generate Helm Chart
 website: ## Generate Docs Website
 	cd website; npm install; git submodule update --init --recursive; hugo
 
-website: ## Generate Docs Website
-	cd website; npm install; git submodule update --init --recursive; hugo
-
 toolchain: ## Install developer toolchain
 	./hack/toolchain.sh
 
