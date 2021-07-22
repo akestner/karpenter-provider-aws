@@ -2,10 +2,8 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://awslabs.github.com/karpenter/docs/categories/</loc>
+    <loc>/docs/</loc>
   </url><url>
-    <loc>http://awslabs.github.com/karpenter/docs/</loc>
-  </url><url>
-    <loc>http://awslabs.github.com/karpenter/docs/tags/</loc>
+    <loc>/</loc>
   </url>
 </urlset>
