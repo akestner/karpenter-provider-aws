@@ -6,23 +6,23 @@
 <meta name="generator" content="Hugo 0.86.0" /><META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
 
 
-<link rel="shortcut icon" href="/karpenter/favicons/favicon.ico" >
-<link rel="apple-touch-icon" href="/karpenter/favicons/apple-touch-icon-180x180.png" sizes="180x180">
-<link rel="icon" type="image/png" href="/karpenter/favicons/favicon-16x16.png" sizes="16x16">
-<link rel="icon" type="image/png" href="/karpenter/favicons/favicon-32x32.png" sizes="32x32">
-<link rel="icon" type="image/png" href="/karpenter/favicons/android-36x36.png" sizes="36x36">
-<link rel="icon" type="image/png" href="/karpenter/favicons/android-48x48.png" sizes="48x48">
-<link rel="icon" type="image/png" href="/karpenter/favicons/android-72x72.png" sizes="72x72">
-<link rel="icon" type="image/png" href="/karpenter/favicons/android-96x96.png" sizes="96x96">
-<link rel="icon" type="image/png" href="/karpenter/favicons/android-144x144.png" sizes="144x144">
-<link rel="icon" type="image/png" href="/karpenter/favicons/android-192x192.png" sizes="192x192">
+<link rel="shortcut icon" href="/favicons/favicon.ico" >
+<link rel="apple-touch-icon" href="/favicons/apple-touch-icon-180x180.png" sizes="180x180">
+<link rel="icon" type="image/png" href="/favicons/favicon-16x16.png" sizes="16x16">
+<link rel="icon" type="image/png" href="/favicons/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/favicons/android-36x36.png" sizes="36x36">
+<link rel="icon" type="image/png" href="/favicons/android-48x48.png" sizes="48x48">
+<link rel="icon" type="image/png" href="/favicons/android-72x72.png" sizes="72x72">
+<link rel="icon" type="image/png" href="/favicons/android-96x96.png" sizes="96x96">
+<link rel="icon" type="image/png" href="/favicons/android-144x144.png" sizes="144x144">
+<link rel="icon" type="image/png" href="/favicons/android-192x192.png" sizes="192x192">
 
 <title>Development Guide | Karpenter</title>
 <meta name="description" content="Just-in-time Nodes for Any Kubernetes Cluster"><meta property="og:title" content="Development Guide" />
 <meta property="og:description" content="Dependencies The following tools are required for contributing to the Karpenter project.
    Package Version Install     go v1.15.3&#43; brew install go   kubectl  brew install kubectl   helm  brew install helm   Other tools  make toolchain    Developing Setup / Teardown Based on how you are running your Kubernetes cluster, follow the Environment specific setup to configure your environment before you continue." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="karpenter/docs/development-guide/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="/docs/development-guide/" /><meta property="article:section" content="docs" />
 
 <meta property="og:site_name" content="Karpenter" />
 
@@ -39,8 +39,8 @@
 
 
 
-<link rel="preload" href="/karpenter/scss/main.min.fede9e55e1510c1c9418081e6ba2d74a5c77b9ccb36880a5ccc2d70d6911a09a.css" as="style">
-<link href="/karpenter/scss/main.min.fede9e55e1510c1c9418081e6ba2d74a5c77b9ccb36880a5ccc2d70d6911a09a.css" rel="stylesheet" integrity="">
+<link rel="preload" href="/scss/main.min.fede9e55e1510c1c9418081e6ba2d74a5c77b9ccb36880a5ccc2d70d6911a09a.css" as="style">
+<link href="/scss/main.min.fede9e55e1510c1c9418081e6ba2d74a5c77b9ccb36880a5ccc2d70d6911a09a.css" rel="stylesheet" integrity="">
 
 
 <script
@@ -57,7 +57,7 @@
     <header>
       
 <nav class="js-navbar-scroll navbar navbar-expand navbar-dark flex-column flex-md-row td-navbar">
-        <a class="navbar-brand" href="karpenter/">
+        <a class="navbar-brand" href="/">
 		<span class="navbar-logo"></span><span class="text-uppercase font-weight-bold">Karpenter</span>
 	</a>
 	<div class="td-navbar-nav-scroll ml-md-auto" id="main_navbar">
@@ -73,7 +73,7 @@
 				
 				
 				
-				<a class="nav-link" href="karpenter/docs/getting-started/" ><span>Getting Started Guide</span></a>
+				<a class="nav-link" href="/docs/getting-started/" ><span>Getting Started Guide</span></a>
 			</li>
 			
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
@@ -85,7 +85,7 @@
 				
 				
 				
-				<a class="nav-link active" href="karpenter/docs/" ><span class="active">Documentation</span></a>
+				<a class="nav-link active" href="/docs/" ><span class="active">Documentation</span></a>
 			</li>
 			
 			<li class="nav-item mr-4 mb-2 mb-lg-0">
@@ -152,9 +152,9 @@
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-karpenterdocs-li">
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section with-child active-path" id="m-docs-li">
     
-      <a href="karpenter/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-karpenterdocs"><span class="">Documentation</span></a>
+      <a href="/docs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__section tree-root" id="m-docs"><span class="">Documentation</span></a>
     
     
       
@@ -178,36 +178,9 @@
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-karpenterdocsgetting-started-li">
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsgetting-started-li">
     
-      <a href="karpenter/docs/getting-started/" title="Getting Started with Karpenter on AWS" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-karpenterdocsgetting-started"><span class="">Getting Started Guide</span></a>
-    
-    
-  </li>
-
-          
-        
-          
-            
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-karpenterdocsfaqs-li">
-    
-      <a href="karpenter/docs/faqs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-karpenterdocsfaqs"><span class="">FAQs</span></a>
+      <a href="/docs/getting-started/" title="Getting Started with Karpenter on AWS" class="align-left pl-0 td-sidebar-link td-sidebar-link__section" id="m-docsgetting-started"><span class="">Getting Started Guide</span></a>
     
     
   </li>
@@ -232,9 +205,9 @@
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-karpenterdocsprovisioner-crd-li">
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsfaqs-li">
     
-      <a href="karpenter/docs/provisioner-crd/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-karpenterdocsprovisioner-crd"><span class="">Provisioner CRD</span></a>
+      <a href="/docs/faqs/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsfaqs"><span class="">FAQs</span></a>
     
     
   </li>
@@ -259,9 +232,36 @@
   
   
   
-  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-karpenterdocsdevelopment-guide-li">
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child" id="m-docsprovisioner-crd-li">
     
-      <a href="karpenter/docs/development-guide/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-karpenterdocsdevelopment-guide"><span class="td-sidebar-nav-active-item">Development Guide</span></a>
+      <a href="/docs/provisioner-crd/" class="align-left pl-0 td-sidebar-link td-sidebar-link__page" id="m-docsprovisioner-crd"><span class="">Provisioner CRD</span></a>
+    
+    
+  </li>
+
+          
+        
+          
+            
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <li class="td-sidebar-nav__section-title td-sidebar-nav__section without-child active-path" id="m-docsdevelopment-guide-li">
+    
+      <a href="/docs/development-guide/" class="align-left pl-0 active td-sidebar-link td-sidebar-link__page" id="m-docsdevelopment-guide"><span class="td-sidebar-nav-active-item">Development Guide</span></a>
     
     
   </li>
@@ -373,14 +373,14 @@
 
 
 <li class="breadcrumb-item" >
-	<a href="karpenter/docs/">Documentation</a>
+	<a href="/docs/">Documentation</a>
 </li>
 
 
 
 
 <li class="breadcrumb-item active" aria-current="page">
-	<a href="karpenter/docs/development-guide/">Development Guide</a>
+	<a href="/docs/development-guide/">Development Guide</a>
 </li>
 
 	</ol>
@@ -561,7 +561,7 @@ aws ecr get-login-password --region ${AWS_DEFAULT_REGION} | docker login --usern
 
 
 
-<script src="/karpenter/js/main.min.00eab555a054c3cf1dc7225432bd5f970d72c0b6b8fce1fb8392ff6392c58d2c.js" integrity="sha256-AOq1VaBUw88dxyJUMr1flw1ywLa4/OH7g5L/Y5LFjSw=" crossorigin="anonymous"></script>
+<script src="/js/main.min.5c74b870c6953931a705f390a49c7e4c0a842ec5c83b24354758dd674343ed0d.js" integrity="sha256-XHS4cMaVOTGnBfOQpJx&#43;TAqELsXIOyQ1R1jdZ0ND7Q0=" crossorigin="anonymous"></script>
 
 
 

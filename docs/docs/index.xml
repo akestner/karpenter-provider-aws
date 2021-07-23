@@ -1,13 +1,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Karpenter – Documentation</title>
-    <link>karpenter/docs/</link>
+    <link>/docs/</link>
     <description>Recent content in Documentation on Karpenter</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 05 Jan 2017 00:00:00 +0000</lastBuildDate>
     
-	  <atom:link href="karpenter/docs/index.xml" rel="self" type="application/rss+xml" />
+	  <atom:link href="/docs/index.xml" rel="self" type="application/rss+xml" />
     
     
       
@@ -17,10 +17,10 @@
     
     <item>
       <title>Docs: FAQs</title>
-      <link>karpenter/docs/faqs/</link>
+      <link>/docs/faqs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>karpenter/docs/faqs/</guid>
+      <guid>/docs/faqs/</guid>
       <description>
         
         
@@ -40,7 +40,7 @@
 &lt;h3 id=&#34;does-karpenter-replace-the-kube-scheduler&#34;&gt;Does Karpenter replace the Kube Scheduler?&lt;/h3&gt;
 &lt;p&gt;No. Provisioners work in tandem with the Kube Scheduler. When capacity is unconstrained, the Kube Scheduler will schedule pods as usual. It may schedule pods to nodes managed by Provisioners or other types of capacity in the cluster. Provisioners only attempt to schedule pods when &lt;code&gt;type=PodScheduled,reason=Unschedulable&lt;/code&gt;. In this case, they will make a provisioning decision, launch new capacity, and bind pods to the provisioned nodes. Provisioners do not wait for the Kube Scheduler to make a scheduling decision in this case, as the decision is already made by nature of making a provisioning decision. It&amp;rsquo;s possible that a node from another management solution, like the Cluster Autoscaler, could create a race between the &lt;code&gt;kube-scheduler&lt;/code&gt; and Karpenter. In this case, the first binding call will win, although Karpenter will often win these race conditions due to its performance characteristics. If Karpenter loses this race, the node will eventually be cleaned up.&lt;/p&gt;
 &lt;h3 id=&#34;does-karpenter-support-node-selectors&#34;&gt;Does Karpenter support node selectors?&lt;/h3&gt;
-&lt;p&gt;Yes. Node selectors are an opt-in mechanism which allow customers to specify the nodes on which a pod can scheduled. Provisioners recognize well-known node selectors on incoming pods and use them to constrain the nodes they generate. You can read more about the well-known node selectors Karpenter supports in the &lt;a href=&#34;karpenter/docs/concepts/#well-known-labels&#34;&gt;Concepts&lt;/a&gt; documentation. For example, well known selectors like &lt;code&gt;node.kubernetes.io/instance-type&lt;/code&gt;, &lt;code&gt;topology.kubernetes.io/zone&lt;/code&gt;, &lt;code&gt;kubernetes.io/os&lt;/code&gt;, &lt;code&gt;kubernetes.io/arch&lt;/code&gt; are supported, and will ensure that provisioned nodes are constrained accordingly. Additionally, customers may specify arbitrary labels, which will be automatically applied to every node launched by the Provisioner.&lt;/p&gt;
+&lt;p&gt;Yes. Node selectors are an opt-in mechanism which allow customers to specify the nodes on which a pod can scheduled. Provisioners recognize well-known node selectors on incoming pods and use them to constrain the nodes they generate. You can read more about the well-known node selectors Karpenter supports in the &lt;a href=&#34;/docs/concepts/#well-known-labels&#34;&gt;Concepts&lt;/a&gt; documentation. For example, well known selectors like &lt;code&gt;node.kubernetes.io/instance-type&lt;/code&gt;, &lt;code&gt;topology.kubernetes.io/zone&lt;/code&gt;, &lt;code&gt;kubernetes.io/os&lt;/code&gt;, &lt;code&gt;kubernetes.io/arch&lt;/code&gt; are supported, and will ensure that provisioned nodes are constrained accordingly. Additionally, customers may specify arbitrary labels, which will be automatically applied to every node launched by the Provisioner.&lt;/p&gt;
 &lt;h3 id=&#34;does-karpenter-support-taints&#34;&gt;Does Karpenter support taints?&lt;/h3&gt;
 &lt;p&gt;Yes. Taints are an opt-out mechanism which allows customers to specify the nodes on which a pod cannot be scheduled. Unlike labels, Provisioners do not automatically taint nodes in response to pod tolerations, since pod tolerations do not require that corresponding taints exist. However, similar to labels, customers may specify taints for their Provisioner, which will automatically be applied to every node in the group. This means that if a Provisioner is configured with taints, any incoming pods will not be provisioned unless they tolerate the taints.&lt;/p&gt;
 &lt;h3 id=&#34;does-karpenter-support-topology-spread-constraints&#34;&gt;Does Karpenter support topology spread constraints?&lt;/h3&gt;
@@ -72,10 +72,10 @@
     
     <item>
       <title>Docs: Provisioner CRD</title>
-      <link>karpenter/docs/provisioner-crd/</link>
+      <link>/docs/provisioner-crd/</link>
       <pubDate>Thu, 05 Jan 2017 00:00:00 +0000</pubDate>
       
-      <guid>karpenter/docs/provisioner-crd/</guid>
+      <guid>/docs/provisioner-crd/</guid>
       <description>
         
         
@@ -117,10 +117,10 @@ spec:
     
     <item>
       <title>Docs: Development Guide</title>
-      <link>karpenter/docs/development-guide/</link>
+      <link>/docs/development-guide/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>karpenter/docs/development-guide/</guid>
+      <guid>/docs/development-guide/</guid>
       <description>
         
         
