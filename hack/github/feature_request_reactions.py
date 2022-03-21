@@ -11,8 +11,6 @@ from typing import Union
 from github import Github
 from github.Repository import Repository
 
-print('Getting popular feature requests...')
-
 # To create a GitHub token, see below (the token doesn't need to include any scopes):
 # https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
 github = Github(os.environ.get('GH_TOKEN'))
@@ -48,7 +46,7 @@ for issue in sorted(issue_reaction_count, key=itemgetter('reactions'), reverse=T
   ])
 
 # Write CSV data to STDOUT, redirect to file to persist, e.g.
-# ./hack/feature_request_reactions.py > "karpenter-feature-requests-$(date +"%Y-%m-%d").csv"
+# ./hack/github/feature_request_reactions.py > "karpenter-feature-requests-$(date +"%Y-%m-%d").csv"
 writer = csv.writer(sys.stdout)
 writer.writerows(issue_row_list)
 
