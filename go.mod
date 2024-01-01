@@ -6,22 +6,22 @@ require (
 	github.com/Pallinder/go-randomdata v1.2.0
 	github.com/PuerkitoBio/goquery v1.8.1
 	github.com/avast/retry-go v3.0.0+incompatible
-	github.com/aws/aws-sdk-go v1.47.3
+	github.com/aws/aws-sdk-go v1.49.13
 	github.com/aws/karpenter-core v0.32.2-0.20231102171539-079e3ce92f37
 	github.com/aws/karpenter/tools/kompat v0.0.0-20231010173459-62c25a3ea85c
 	github.com/go-logr/zapr v1.3.0
 	github.com/imdario/mergo v0.3.16
 	github.com/mitchellh/hashstructure/v2 v2.0.2
-	github.com/onsi/ginkgo/v2 v2.13.0
-	github.com/onsi/gomega v1.29.0
+	github.com/onsi/ginkgo/v2 v2.13.2
+	github.com/onsi/gomega v1.30.0
 	github.com/patrickmn/go-cache v2.1.0+incompatible
-	github.com/pelletier/go-toml/v2 v2.1.0
-	github.com/prometheus/client_golang v1.17.0
-	github.com/samber/lo v1.38.1
+	github.com/pelletier/go-toml/v2 v2.1.1
+	github.com/prometheus/client_golang v1.18.0
+	github.com/samber/lo v1.39.0
 	go.uber.org/multierr v1.11.0
 	go.uber.org/zap v1.26.0
 	golang.org/x/sync v0.5.0
-	golang.org/x/time v0.4.0
+	golang.org/x/time v0.5.0
 	k8s.io/api v0.28.3
 	k8s.io/apiextensions-apiserver v0.28.3
 	k8s.io/apimachinery v0.28.3
@@ -72,7 +72,7 @@ require (
 	github.com/kelseyhightower/envconfig v1.4.0 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mattn/go-runewidth v0.0.15 // indirect
-	github.com/matttproud/golang_protobuf_extensions v1.0.4 // indirect
+	github.com/matttproud/golang_protobuf_extensions/v2 v2.0.0 // indirect
 	github.com/mitchellh/go-homedir v1.1.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
 	github.com/modern-go/reflect2 v1.0.2 // indirect
@@ -80,7 +80,7 @@ require (
 	github.com/olekukonko/tablewriter v0.0.5 // indirect
 	github.com/pkg/errors v0.9.1 // indirect
 	github.com/prometheus/client_model v0.5.0 // indirect
-	github.com/prometheus/common v0.44.0 // indirect
+	github.com/prometheus/common v0.45.0 // indirect
 	github.com/prometheus/procfs v0.12.0 // indirect
 	github.com/prometheus/statsd_exporter v0.24.0 // indirect
 	github.com/rivo/uniseg v0.4.4 // indirect
@@ -91,7 +91,7 @@ require (
 	golang.org/x/exp v0.0.0-20231006140011-7918f672742d // indirect
 	golang.org/x/net v0.17.0 // indirect
 	golang.org/x/oauth2 v0.13.0 // indirect
-	golang.org/x/sys v0.13.0 // indirect
+	golang.org/x/sys v0.15.0 // indirect
 	golang.org/x/term v0.13.0 // indirect
 	golang.org/x/text v0.13.0 // indirect
 	golang.org/x/tools v0.14.0 // indirect
