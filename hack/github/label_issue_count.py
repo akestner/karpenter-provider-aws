@@ -6,14 +6,13 @@ import sys
 
 # This script requires the python GitHub client:
 # pip install PyGithub
-from github import Github
+from github import Github, Auth
 from github.Repository import Repository
-
-print('Getting popular issue labels...')
 
 # To create a GitHub token, see below (the token doesn't need to include any scopes):
 # https://help.github.com/en/github/authenticating-to-github/creating-a-personal-access-token-for-the-command-line
-github = Github(os.environ.get('GH_TOKEN'))
+auth = Auth.Token(token=os.environ.get('GH_TOKEN'))
+github = Github(auth=auth)
 
 issue_label_counts: dict[str, int] = {}
 PLUS_ONE_REACTION_STRINGS = {'+1', 'heart', 'hooray', 'rocket', 'eyes'}
@@ -32,8 +31,6 @@ for label in sorted(issue_label_counts, key=issue_label_counts.get, reverse=True
   label_row_list.append([label, issue_label_counts[label]])
 
 # Write CSV data to STDOUT, redirect to file to persist, e.g.
-# ./hack/label_issue_count.py > "karpenter-labels-$(date +"%Y-%m-%d").csv"
+# ./hack/github/label_issue_count.py > "karpenter-labels-$(date +"%Y-%m-%d").csv"
 writer = csv.writer(sys.stdout)
 writer.writerows(label_row_list)
-
-print('Done!')
