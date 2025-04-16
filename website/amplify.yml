@@ -19,9 +19,6 @@ applications:
       phases:
         preBuild:
           commands:
-            # Confirm env vars
-            - env
-
             # Install Dart Sass
             - curl -LJO https://github.com/sass/dart-sass/releases/download/${DART_SASS_VERSION}/dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz
             - sudo tar -C /usr/local/bin -xf dart-sass-${DART_SASS_VERSION}-linux-x64.tar.gz
